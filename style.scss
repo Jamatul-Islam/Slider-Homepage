@@ -32,7 +32,91 @@ body {
 .header {
   margin: 2rem 0;
 }
-
+.showcase {
+  padding: 15rem;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  &-secondary {
+    color: $color-orange;
+    font-weight: 700;
+    margin-bottom: $small;
+  }
+  &-primary {
+    color: #fff;
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 1.2;
+    width: 60%;
+    margin-bottom: $small;
+  }
+  &-paragraph {
+    color: #fff;
+    font-weight: 400;
+    width: 40%;
+    margin-bottom: $medium;
+  }
+  &-btn {
+  }
+}
+.rating-section {
+  text-align: center;
+  padding: 13rem 15rem;
+  &-heading {
+    font-size: 5rem;
+    line-height: 1.2;
+    color: $color-primary;
+    &-style {
+      background: linear-gradient(
+        90deg,
+        rgba(207, 67, 162, 1) 0%,
+        rgba(188, 58, 205, 1) 35%,
+        rgba(22, 76, 175, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    margin-bottom: $small;
+  }
+  &-rating-box {
+    margin-bottom: $high;
+    &-title {
+      color: rgb(56, 56, 56);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    &-icons {
+      color: rgb(250, 183, 58);
+    }
+  }
+  &-ratings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+}
+.description-section {
+  padding: 10rem 4rem;
+  display: flex;
+  background: rgb(243, 242, 246);
+  div img {
+    width: 70rem;
+  }
+  &-heading {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: $color-primary;
+    margin-bottom: $medium;
+    width: 80%;
+  }
+  div p {
+    width: 80%;
+    margin-bottom: $small;
+  }
+}
 //componets
 .navbar {
   display: flex;
@@ -42,7 +126,6 @@ body {
   align-content: center;
 
   &-title {
-    margin-top: 0.5rem;
     &-icon {
       width: 15rem;
     }
@@ -51,12 +134,13 @@ body {
     &-list {
       display: flex;
       list-style: none;
+      align-items: center;
       &-item {
-        padding: 1rem 1.5rem;
       }
       &-link {
         text-decoration: none;
         transition: all 0.3s ease;
+        padding: 1rem 1.5rem;
         color: $color-primary;
         &:hover {
           color: $color-gray;
@@ -70,8 +154,10 @@ body {
   }
 }
 .btn {
+  display: inline-block;
   padding: 1rem 2rem;
   border-radius: 3rem;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
   &--cyan {
@@ -81,5 +167,30 @@ body {
       background-color: $color-orange;
       color: #fff;
     }
+  }
+  &--red {
+    background: $color-orange;
+    color: #fff;
+    &:hover {
+      background-color: $color-cyan;
+      color: #fff;
+    }
+  }
+}
+.rating {
+  padding: 4rem;
+  text-align: center;
+  &-title {
+  }
+  &-icon {
+    border-radius: 50%;
+  }
+  &-description {
+    font-size: 2rem;
+    margin-bottom: $small;
+    width: 100%;
+  }
+  &-subtitle {
+    color: rgb(175, 175, 175);
   }
 }
